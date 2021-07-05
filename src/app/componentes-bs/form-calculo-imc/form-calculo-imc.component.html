@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header">
+      Formulario IMC - Angular
+    </div>
+    <div class="card-body">
+        <div class="mb-3">            
+            <label for="txtnombre" class="form-label">Ingrese su nombre:</label>
+            <input type="text" [(ngModel)]="frmImc.nombre" class="form-control" id="txtnombre" >
+          </div>
+        <div class="mb-3">            
+            <label for="txtpeso" class="form-label">Ingrese su peso:</label>
+            <input type="number" [(ngModel)]="frmImc.peso" class="form-control" id="txtpeso" >
+          </div>
+          <div class="mb-3">
+            <label for="txttalla" class="form-label">Ingrese su talla:</label>
+            <input type="number" [(ngModel)]="frmImc.talla" class="form-control" id="txttalla" >
+          </div>
+          <button type="button" class="btn btn-primary" (click)="calcularIMC()">Calcular</button>
+          <hr />
+          <div class="alert alert-primary" role="alert" *ngIf="mostrarResultado" >
+            La suma es: {{frmImc.resultado}}
+          </div>
+          <hr />
+          <table class="table table-primary">
+            <thead>
+              <tr>
+                <th scope="col">Paciente</th>
+                <th scope="col">Valor IMC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let paciente of listPacientes">
+                <td>{{paciente.nombre}}</td>
+                <td>{{paciente.imc}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>

@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-header">
+      Listado de alumnos - Angular
+    </div>
+    <div class="card-body">
+        <table class="table table-primary">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let alumno of listAlumnos">
+                <th scope="row">1</th>
+                <td>{{alumno.id}}</td>
+                <td>{{alumno.nombre}}</td>
+                <td>{{alumno.apellido}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>

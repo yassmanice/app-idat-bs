@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+      Formulario Suma - Angular
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            
+            <label for="txtnumero1" class="form-label">Ingrese número 1:</label>
+            <input type="number" [(ngModel)]="frmSuma.numero1" class="form-control" id="txtnumero1" >
+          </div>
+          <div class="mb-3">
+            <label for="txtnumero2" class="form-label">Ingrese número 2:</label>
+            <input type="number" [(ngModel)]="frmSuma.numero2" class="form-control" id="txtnumero2" >
+          </div>
+          <button type="button" class="btn btn-primary" (click)="calcularSuma()">Calcular</button>
+          <hr />
+          <div class="alert alert-primary" role="alert" *ngIf="mostrarResultado" >
+            La suma es: {{frmSuma.resultado}}
+          </div>
+    </div>
+  </div>
